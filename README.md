@@ -67,3 +67,7 @@ Essa consulta retorna a soma das quantidades vendidas por mês, permitindo visua
 > - Clientes mais fiéis: Conhecer os clientes mais fiéis pode ajudar a direcionar campanhas de marketing segmentadas, oferecendo benefícios exclusivos para aumentar ainda mais a lealdade.
 
 > - Sazonalidade: A análise de sazonalidade ajuda a prever quais meses terão maior demanda, permitindo uma melhor preparação de estoque e ações promocionais durante os períodos de pico.
+
+# Conclusão
+
+Esse projeto foi uma oportunidade para aplicar conceitos de SQL e análise de dados em um cenário simulado, utilizando dados ficticios e proporcionando uma visão prática de como obter insights valiosos de um e-commerce. 
