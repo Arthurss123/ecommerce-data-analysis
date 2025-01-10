@@ -1,2 +1,40 @@
-# projeto
- 
+# Análise de E-commerce com PostgreSQL
+
+## Descrição do Projeto
+
+Este projeto tem como objetivo simular um e-commerce, utilizando um banco de dados PostgreSQL, e realizar análises sobre o comportamento de vendas, clientes e produtos. O projeto foi desenvolvido com o propósito de colocar em prática conceitos de análise de dados e SQL, além de proporcionar uma oportunidade de aprendizado prático ao manipular dados reais e gerar insights sobre o negócio.
+
+### Principais Funcionalidades
+
+- **Geração de Dados Fictícios**: Utilizando a biblioteca `Faker`, foram gerados dados simulados de clientes, produtos e pedidos.
+- **Análises Realizadas**:
+  - Produtos mais vendidos.
+  - Clientes mais fiéis (com maior número de pedidos).
+  - Análise da sazonalidade das vendas ao longo do ano.
+
+### Tecnologias Utilizadas
+
+- **Python**: Linguagem de programação utilizada para interagir com o banco de dados, gerar dados e realizar as análises.
+- **PostgreSQL**: Banco de dados relacional utilizado para armazenar e manipular os dados.
+- **pandas**: Biblioteca Python para manipulação de dados e execução das consultas SQL diretamente no código.
+- **Faker**: Biblioteca Python para geração de dados fictícios (clientes, produtos, etc.).
+- **psycopg2**: Conector Python utilizado para conectar o código ao banco de dados PostgreSQL.
+
+## Objetivos das Análises
+
+### 1. **Produtos Mais Vendidos**
+
+A primeira análise visa identificar quais são os produtos mais vendidos no e-commerce. Esta análise ajuda a entender quais produtos estão gerando mais receita e permitem que o negócio tome decisões sobre estoque, marketing e promoções.
+
+**Consulta SQL**:
+```sql
+SELECT p.nome_produto, SUM(pe.quantidade) AS total_vendido
+FROM pedido pe
+JOIN produto p ON pe.produto_id = p.produto_id
+GROUP BY p.nome_produto
+ORDER BY total_vendido DESC
+LIMIT 50;
+```
+
+
+Essa consulta retorna os 50 produtos mais vendidos, classificando-os pela quantidade total vendida. Com os dados gerados, você pode obter uma visão clara dos produtos que mais atraem os clientes
